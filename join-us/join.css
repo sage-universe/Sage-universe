@@ -1,0 +1,105 @@
+/* General Styles for Dark Theme */
+body.dark-theme {
+    background-color: #121212;
+    color: #f1f1f1;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+header {
+    background-color: #1e1e1e;
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    color: #f1f1f1;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+/* Join Us Section */
+.join-us {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #1e1e1e;
+}
+
+.join-us h2 {
+    font-size: 2.5rem;
+    color: #f1f1f1;
+    margin-bottom: 20px;
+}
+
+.join-us p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.join-us .input-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.join-us input[type="email"] {
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    background-color: #2a2a2a;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.join-us input[type="email"]:focus {
+    border-color: #6f91f1;
+    outline: none;
+}
+
+.join-us button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border: none;
+    background-color: #6f91f1;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.join-us button:hover {
+    background-color: #4a70c7;
+    transform: scale(1.05);
+}
+
+#subscription-message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ff9900;
+}
+
+/* Animation on Subscription Message */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#subscription-message {
+    animation: fadeIn 1s ease-out;
+}

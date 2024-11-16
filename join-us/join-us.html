@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us - Winter Sage Hackathon 2024-25</title>
+    <link rel="stylesheet" href="join.css">
+    <script src="https://cdn.jsdelivr.net/npm/push.js"></script> <!-- Push.js for WebPush -->
+</head>
+<body class="dark-theme">
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <h1>Join Us and Stay Updated!</h1>
+            <p>Subscribe to our newsletter to receive the latest updates, event news, and more.</p>
+        </div>
+    </header>
+
+    <!-- Join Us Section -->
+    <section class="join-us">
+        <div class="container">
+            <h2>Subscribe to our Newsletter</h2>
+            <p>Stay informed about the Winter Sage Hackathon, upcoming events, and news related to technology and innovation. Just enter your email below!</p>
+
+            <!-- Subscription Form -->
+            <form id="subscribe-form" action="your-server-endpoint" method="POST">
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit" id="submit-btn">Subscribe</button>
+                </div>
+            </form>
+
+            <!-- Subscription Message -->
+            <div id="subscription-message"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Winter Sage Hackathon. All rights reserved.</p>
+    </footer>
+
+    <script src="join.js"></script>
+</body>
+</html>
