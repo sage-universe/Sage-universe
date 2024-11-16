@@ -1,0 +1,133 @@
+/* General Styles for Dark Theme */
+body.dark-theme {
+    background-color: #121212;
+    color: #f1f1f1;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+header {
+    background-color: #1e1e1e;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #f1f1f1;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+/* Hackathon Image Section */
+.hackathon-img-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #1e1e1e;
+}
+
+.hackathon-img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Hackathon Details Section */
+.hackathon-details {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #1e1e1e;
+}
+
+.hackathon-details h2 {
+    font-size: 2.5rem;
+    color: #f1f1f1;
+    margin-bottom: 20px;
+}
+
+.hackathon-details .event-info p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.hackathon-details .event-info a {
+    color: #6f91f1;
+    text-decoration: none;
+}
+
+.hackathon-details .event-info a:hover {
+    text-decoration: underline;
+}
+
+/* Countdown Section */
+.countdown {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #2d2d2d;
+}
+
+.countdown h3 {
+    font-size: 2rem;
+    color: #f1f1f1;
+    margin-bottom: 20px;
+}
+
+#countdown {
+    font-size: 2.5rem;
+    color: #ff9900;
+}
+
+/* Sponsors Section */
+.sponsors {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #1e1e1e;
+}
+
+.sponsors h2 {
+    font-size: 2.5rem;
+    color: #f1f1f1;
+    margin-bottom: 20px;
+}
+
+.sponsors p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.sponsor-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.sponsor-img {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* Footer */
+footer {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #888;
+}

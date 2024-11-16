@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sage Universe Organization</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <i class="fas fa-globe"></i> Sage Universe
+    </div>
+    <nav>
+      <a href="pages/about/about.html">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#hackathon">Hackathon</a>
+      <a href="#community">Community</a>
+      <a href="#contact" class="btn highlight">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Sage Universe</h1>
+    <p>Empowering developers with innovative projects and a thriving community</p>
+    <a href="login.html" class="btn primary"><i class="fas fa-user-plus"></i> Join Now</a>
+    <a href="#projects" class="btn secondary"><i class="fas fa-project-diagram"></i> Learn More</a>
+  </section>
+
+  <section id="about" class="section fadeIn">
+    <h2>About Us</h2>
+    <p>We are an open-source organization dedicated to fostering innovation and collaboration in the developer community. Join us to make a real-world impact!</p>
+  </section>
+
+  <section id="projects" class="section fadeIn">
+    <h2>Our Projects</h2>
+    <div class="project-cards">
+      <div class="card">
+        <i class="fas fa-code"></i>
+        <h3>Project One</h3>
+        <p>A project that helps solve real-world problems with cutting-edge technology.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-rocket"></i>
+        <h3>Project Two</h3>
+        <p>Exploring new frontiers with innovative solutions in tech.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-cogs"></i>
+        <h3>Project Three</h3>
+        <p>Improving tools and frameworks to empower developers around the globe.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Winter Sage Hackathon 2024-25 Section -->
+  <section id="hackathon" class="section hackathon fadeIn">
+    <h2>Winter Sage Hackathon 2024-25</h2>
+    <p>Join us for the most exciting hackathon of the year! The Winter Sage Hackathon 2024-25 is an opportunity for developers worldwide to come together, innovate, and build amazing projects. Whether you're a beginner or an expert, this event is for everyone!</p>
+    <div class="hackathon-img">
+      <img src="Gemini_Generated_Image_jdln76jdln76jdln.jpg" alt="Winter Sage Hackathon 2024-25" />
+    </div>
+    <a href="pages/hackathone/hackathon.html" class="btn primary"><i class="fas fa-info-circle"></i> Learn More</a>
+  </section>
+
+  <section id="community" class="section fadeIn">
+    <h2>Join Our Community</h2>
+    <p>Collaborate with like-minded developers, share ideas, and grow together.</p>
+    <div class="community-buttons">
+      <a href="https://discord.com" target="_blank" class="btn discord"><i class="fab fa-discord"></i> Join Discord</a>
+      <a href="https://github.com" target="_blank" class="btn github"><i class="fab fa-github"></i> Contribute on GitHub</a>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-heading">
+        <h2>Contact Us</h2>
+        <p>We would love to hear from you! Fill out the form below and we will get back to you as soon as possible.</p>
+      </div>
+      <form action="submit_form.php" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="example@mail.com" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+  
+
+  <footer>
+    <p>&copy; 2024 Sage Universe. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
