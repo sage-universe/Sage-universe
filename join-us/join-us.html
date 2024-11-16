@@ -24,7 +24,7 @@
             <p>Stay informed about the Winter Sage Hackathon, upcoming events, and news related to technology and innovation. Just enter your email below!</p>
 
             <!-- Subscription Form -->
-            <form id="subscribe-form" action="your-server-endpoint" method="POST">
+            <form id="subscribe-form">
                 <div class="input-group">
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
                     <button type="submit" id="submit-btn">Subscribe</button>
@@ -36,20 +36,59 @@
         </div>
     </section>
 
-    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Winter Sage Hackathon. All rights reserved.</p>
+    </footer>
 
-    <!-- WebPushR Tracking Code -->
-    <script>(function(w,d, s, id) {
-        if(typeof(w.webpushr)!=='undefined') return;
-        w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};
-        var js, fjs = d.getElementsByTagName(s)[0];
-        js = d.createElement(s); js.id = id;
-        js.async=1; js.src = "https://cdn.webpushr.com/app.min.js";
-        fjs.parentNode.appendChild(js);
-    }(window,document, 'script', 'webpushr-jssdk'));
-    webpushr('setup', {'key':'BCuKn7PkFqIIsLNV8L0V159ZOWydwE8bn9P4DmkHO-2R161GFRPRVkg-tja97VFrlLVBkCNhZB4A6kTNLgILA_k' });
+    <!-- WebPush Notification Subscription and Script -->
+    <script>
+        // Subscription form submission handler
+        document.getElementById("subscribe-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const email = document.getElementById("email").value;
+            const messageElement = document.getElementById("subscription-message");
+
+            // Simple email validation
+            if (validateEmail(email)) {
+                // Simulate a subscription (In a real app, you'd send the email to the server)
+                messageElement.innerHTML = `Thank you for subscribing, ${email}! We'll keep you updated.`;
+                messageElement.style.color = "#66ff66"; // Green color for success message
+
+                // Clear the input field after submission
+                document.getElementById("email").value = '';
+
+                // Trigger WebPush notification
+                triggerWebPushNotification();
+            } else {
+                messageElement.innerHTML = "Please enter a valid email address.";
+                messageElement.style.color = "#ff6666"; // Red color for error message
+            }
+        });
+
+        // Simple email validation function
+        function validateEmail(email) {
+            const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return re.test(email);
+        }
+
+        // Trigger WebPush notification for new subscription
+        function triggerWebPushNotification() {
+            if (Push.Permission.has()) {
+                Push.create("Thanks for Subscribing!", {
+                    body: "You're now subscribed to our newsletter.",
+                    icon: "https://avatars.githubusercontent.com/u/177652343?s=200&v=4", // Add your icon URL here
+                    timeout: 5000,
+                    onClick: function () {
+                        window.focus();
+                    }
+                });
+            } else {
+                Push.Permission.request();
+            }
+        }
     </script>
 
-    <script src="join.js"></script>
 </body>
 </html>
