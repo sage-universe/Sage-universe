@@ -75,17 +75,13 @@
   </section>
 
   <!-- Contact Us Section -->
-<section id="contact" class="contact-section">
+  <section id="contact" class="contact-section">
     <div class="container">
       <div class="contact-heading">
         <h2>Contact Us</h2>
         <p>We would love to hear from you! Fill out the form below and we will get back to you as soon as possible.</p>
       </div>
-      <form action="submit_form.php" method="POST" class="contact-form">
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" placeholder="John Doe" required />
-        </div>
+      <form action="https://formspree.io/f/xkgnbdbk" method="POST" class="contact-form">
         <div class="form-group">
           <label for="email">Your Email</label>
           <input type="email" id="email" name="email" placeholder="example@mail.com" required />
@@ -94,10 +90,12 @@
           <label for="message">Your Message</label>
           <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
         </div>
+        <!-- Add additional form fields here if needed -->
         <button type="submit" class="btn primary">Send Message</button>
       </form>
     </div>
   </section>
+  
   
 
   <footer>
