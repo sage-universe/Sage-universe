@@ -43,3 +43,35 @@ function triggerWebPushNotification() {
         Push.Permission.request();
     }
 }
+// Handle the subscription form submission
+document.getElementById('subscribe-form').addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevent the default form submission
+    
+    // Get the email input
+    const email = document.getElementById('email').value;
+    
+    // Here you would send the email to your server to store it, but we will continue with WebPushR.
+
+    // Show a message confirming the subscription
+    document.getElementById('subscription-message').innerText = "Thank you for subscribing! You will receive notifications soon.";
+
+    // Request permission for push notifications
+    Notification.requestPermission().then(function(permission) {
+        if (permission === "granted") {
+            // User has granted permission, subscribe them to WebPushR
+            webpushr('subscribe', {
+                email: email  // You can also store the email here for sending targeted notifications
+            });
+
+            // Optionally: Trigger a confirmation notification
+            Push.create("Thank you for subscribing!", {
+                body: "You will now receive updates about Winter Sage Hackathon.",
+                icon: "/path/to/icon.png",
+                timeout: 5000, // Show notification for 5 seconds
+            });
+        } else {
+            // User did not grant permission for notifications
+            alert("You have denied push notifications. You will not receive future updates.");
+        }
+    });
+});
