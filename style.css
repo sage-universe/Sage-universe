@@ -13,59 +13,196 @@
     scroll-behavior: smooth;
   }
   
-  /* Header */
-  header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 40px;
-    background-color: #222;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    transition: all 0.3s ease;
+ /* Container styles */
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 64px;
+    padding-right: 64px;
   }
-  
-  header .logo {
-    font-size: 2rem;
-    color: #4caf50;
-    font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
   }
-  
-  header nav {
-    display: flex;
-    gap: 30px;
-    align-items: center;
+}
+
+/* Hamburger menu */
+.hamburger {
+  position: relative;
+  display: block;
+  width: 35px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #FFF;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+/* Mobile navigation */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #12002F;
+  padding-top: 120px;
+  z-index: 98;
+  transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+  left: 0;
+}
+
+.mobile-nav a {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 16px;
+  text-align: center;
+  padding: 12px 16px;
+  background-color: #1f103F;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.mobile-nav a:hover {
+  background-color: #24104f;
+}
+
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
   }
-  
-  header nav a {
-    text-decoration: none;
-    color: #f0f0f0;
-    font-size: 1rem;
-    transition: color 0.3s;
-    font-weight: 500;
+
+  .hamburger {
+    display: none;
   }
-  
-  header nav a:hover {
-    color: #4caf50;
+}
+
+/* Section headings */
+section h2 {
+  text-align: center;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+  color: #313131;
+  font-size: 36px;
+}
+
+/* Button styles */
+.button {
+  display: inline-block;
+  color: #FFF;
+  font-size: 20px;
+  background-color: #FF9FDB;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 767px) {
+  .button {
+    font-size: 18px;
   }
-  
-  header nav .btn {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+}
+
+/* Header */
+header {
+  color: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+header .container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+}
+
+header .container h2 {
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+header .container nav {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  font-size: 1rem;
+}
+
+header .container nav a {
+  margin-left: 2rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+  text-decoration: none;
+  color: white;
+}
+
+header .container nav :hover,
+header .container nav .active {
+  color: #4caf50;
+  border-bottom: 3px solid #4caf50;
+}
+header .logo {
+  font-size: 2rem;
+  color: #4caf50;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  header .container nav {
+    display: none;
   }
-  
-  header nav .btn.highlight {
-    background-color: #81c784;
-  }
-  
-  header nav .btn:hover {
-    background-color: #388e3c;
-  }
-  
+}
+
   /* Hero Section */
   .hero {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('hero-image.jpg');

@@ -10,18 +10,29 @@
 </head>
 <body>
   <header>
-    <div class="logo">
-      <i class="fas fa-globe"></i> Sage Universe
+    <div class="container">
+      <div class="logo">
+        <i class="fas fa-globe"></i> Sage Universe
+      </div>
+      <nav>
+        <a href="pages/about/about.html">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#hackathon">Hackathon</a>
+        <a href="#community">Community</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="hamburger">
+        <div class="bar"></div>
+      </button>
     </div>
-    <nav>
-      <a href="pages/about/about.html">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#hackathon">Hackathon</a>
-      <a href="#community">Community</a>
-      <a href="#contact" class="btn highlight">Contact</a>
-    </nav>
   </header>
-
+  <nav class="mobile-nav">
+    <a href="pages/about/about.html">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#hackathon">Hackathon</a>
+    <a href="#community">Community</a>
+    <a href="#contact">Contact</a>
+  </nav>
   <section class="hero">
     <h1>Welcome to Sage Universe</h1>
     <p>Empowering developers with innovative projects and a thriving community</p>
@@ -103,5 +114,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="nav.js"></script>
 </body>
 </html>
